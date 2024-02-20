@@ -40,6 +40,7 @@ function App() {
         It uses h1 style but
       </Typography>
       <BlueButton> My Button</BlueButton>
+      <BlueButton> Another Button</BlueButton>
     </div>
   );
 }
