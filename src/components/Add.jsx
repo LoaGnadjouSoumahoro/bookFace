@@ -1,14 +1,24 @@
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Fab,
   Modal,
+  Stack,
   TextField,
   Tooltip,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Add as AddIcon } from "@mui/icons-material";
+import {
+  Add as AddIcon,
+  EmojiEmotions,
+  PersonAdd,
+  VideoCameraBack,
+  Image,
+  CalendarMonth,
+} from "@mui/icons-material";
 import styled from "@emotion/styled";
 
 const StyleModal = styled(Modal)({
@@ -61,6 +71,22 @@ const Add = () => {
             placeholder="What's on your minde"
             variant="standard"
           />
+          <Stack direction="row" gap={1} mt={2} mb={3}>
+            <EmojiEmotions color="primary" />
+            <Image color="secondary" />
+            <VideoCameraBack color="success" />
+            <PersonAdd color="error" />
+          </Stack>
+          <ButtonGroup
+            fullWidth
+            variant="contained"
+            aria-label="Basic button group"
+          >
+            <Button>Post</Button>
+            <Button sx={{ width: "100px" }}>
+              <CalendarMonth />
+            </Button>
+          </ButtonGroup>
         </Box>
       </StyleModal>
     </>
